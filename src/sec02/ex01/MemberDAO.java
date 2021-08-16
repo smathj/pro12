@@ -13,21 +13,26 @@ import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
 public class MemberDAO {
+	
 	private Connection con;
 	private PreparedStatement pstmt;
 	private DataSource dataFactory;
 
 	public MemberDAO() {
 		try {
+			
+			// DB연동부
 			Context ctx = new InitialContext();
 			Context envContext = (Context) ctx.lookup("java:/comp/env");
 			dataFactory = (DataSource) envContext.lookup("jdbc/oracle");
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
 	public List listMembers(MemberVO memberVO) {
+		
 		List membersList = new ArrayList();
 		String _name=memberVO.getName();
 		try {

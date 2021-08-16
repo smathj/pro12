@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%
     int num = Integer.parseInt(request.getParameter("num"));
+	// 위의 코드는 다른데에서 파라미터를 받지않기에 에러를 발생한다
+	// 즉 error_500.jsp 을 호출하게된다 ( 테스트를 위한 jsp 페이지 )
 %>
 <!DOCTYPE html>          
 <html>

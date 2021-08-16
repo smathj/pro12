@@ -6,9 +6,10 @@
     <welcome-file>/test02/add.html</welcome-file>
   </welcome-file-list>
   
+  <!-- JSP로 에러페이지를 나타내기에는 , 부담스러워서 web.xml에 한방에 해결! -->
   <error-page>
      <error-code>404</error-code>
-     <location>/err/error_404.jsp</location>
+     <location>/err/error_404.jsp</location>	<!-- 여기서 "/"는 WebContent 맞다 -->
   </error-page>
   
   <error-page>

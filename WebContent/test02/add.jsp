@@ -1,6 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"  
-    errorPage="addException.jsp" %> 
+<%@ page language="java" 
+		 contentType="text/html; charset=UTF-8"
+    	 pageEncoding="UTF-8"  
+    	 errorPage="addException.jsp" %> <!-- 에러페이지의 JSP 설정 -->
 <% 
    int num = Integer.parseInt(request.getParameter("num"));
    int sum=0;
